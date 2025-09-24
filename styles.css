@@ -14,11 +14,11 @@
 }
 
 .body{
-    background-color: rgb(90, 92, 92);
+    background-color: #e3e4f0;
 }
 
 .footer{
-    background-color: #023E8A;
+    background-color: #b5b8d3;
 }
 
 .icon-white{            /* Arrow icon at bottom of page */
@@ -26,7 +26,7 @@
 }
 
 .nb-background-color{   /* navbar background color */
-    background-color: #023E8A;
+    background-color: #b5b8d3;
 }
 
 .nbMenuItem{               /* navbar link text properties */
@@ -36,7 +36,7 @@
 }
 
 .overview{
-    background-color: #dbe3e7;
+    background-color: #ced0e2;
 }
 
 .ovPadLeft{
@@ -53,7 +53,7 @@
 }
 
 .showcase{
-    background-color: #8fa3ab; /*#0096c7*/
+    background-color: #b5b8d3; /* change colors for accessibility!! */
 }
 
 /* ----------------- ID CSS ----------------- */

@@ -1,4 +1,8 @@
 /* ----------------- Class CSS ----------------- */
+@font-face {
+    font-family: 'DM Sans';
+    src: url(https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap);
+}
 
 .about{
     width:400px;
@@ -15,6 +19,7 @@
 
 .body{
     background-color: #ced0e2;
+    font-family: 'DM Sans';
 }
 
 .footer{
@@ -91,4 +96,9 @@
 .border-light {
     border-radius: 7px;
     border: 3px solid #ced0e2;
+}
+
+.howTo {
+    font-weight: normal;
+    font-size: 25px;
 }

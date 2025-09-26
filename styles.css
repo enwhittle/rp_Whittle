@@ -10,15 +10,15 @@
 }
 
 .authors{
-    background-color: #dbe3e7;
-}
-
-.body{
     background-color: #e3e4f0;
 }
 
+.body{
+    background-color: #ced0e2;
+}
+
 .footer{
-    background-color: #b5b8d3;
+    background-color: #4E5583;
 }
 
 .icon-white{            /* Arrow icon at bottom of page */
@@ -26,7 +26,7 @@
 }
 
 .nb-background-color{   /* navbar background color */
-    background-color: #b5b8d3;
+    background-color: #4E5583;
 }
 
 .nbMenuItem{               /* navbar link text properties */
@@ -36,7 +36,8 @@
 }
 
 .overview{
-    background-color: #ced0e2;
+    background-color: #e3e4f0;
+    color: #171f4d !important;
 }
 
 .ovPadLeft{
@@ -48,12 +49,12 @@
 }
 
 .procedure{
-    background-color: #dbe3e7;
+    background-color: #e3e4f0;
     padding: 1px;
 }
 
 .showcase{
-    background-color: #b5b8d3; /* change colors for accessibility!! */
+    background-color: #6971A5;
 }
 
 /* ----------------- ID CSS ----------------- */
@@ -81,4 +82,13 @@
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
+}
+
+#turbine-logo {
+    width: 100px;
+}
+
+.border-light {
+    border-radius: 7px;
+    border: 3px solid #ced0e2;
 }

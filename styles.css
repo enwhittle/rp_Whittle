@@ -55,7 +55,7 @@
 
 .procedure{
     background-color: #e3e4f0;
-    padding: 1px;
+    padding: 3px;
 }
 
 .showcase{
@@ -105,11 +105,19 @@
 }
 
 .howToImage {
-    max-width: 120px;
-    padding: 3px;
+    max-width: 150px;
+    max-height: 150px;
+    padding: 3px 0px;
     border-radius: 7px;
 }
 
 th {
     background-color: #ced0e2 !important;
+}
+
+.acknowledgements {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding: 17px 2px 2px 2px;
+    background-color: #6971A5;
 }

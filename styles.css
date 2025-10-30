@@ -13,7 +13,8 @@
     color:#171f4d;
 }
 
-.authors{
+.authors,
+.results {
     background-color: #e3e4f0;
 }
 
@@ -120,4 +121,21 @@ th {
     margin-bottom: 0px;
     padding: 17px 5px 2px 5px;
     background-color: #6971A5;
+}
+
+.culture-inline {
+    display: inline;
+}
+
+#chart-wrapper{
+    margin: auto;
+    padding: 10px;
+    /* If nesting a chart's container within another container, remove the 
+       height and width values.  The outer container will control the dimensions */ 
+    height: 40vh; 
+    width:  80vw;
+    min-height: 400px;
+    background-color: whitesmoke !important;
+    justify-content: center;
+    align-items: center;  
 }

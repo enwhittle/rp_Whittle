@@ -3,7 +3,7 @@
 // Code for generating a Chart.js line chart
 
 async function getData() {
-    const response = await fetch('../data/results-data.csv'); // .. to move up one folder
+    const response = await fetch('data/results-data.csv');
     const data = await response.text();                           // CSV to TEXT
 
     const xEnergySource = []; // x-axis energy source

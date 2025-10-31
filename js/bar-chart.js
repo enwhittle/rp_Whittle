@@ -6,8 +6,8 @@ async function getData() {
     const response = await fetch('../data/results-data.csv'); // .. to move up one folder
     const data = await response.text();                           // CSV to TEXT
 
-    const xEnergySource = []; // x-axis year values
-    const yEnergyPerAcre = []; // y-axis global temp values
+    const xEnergySource = []; // x-axis energy source
+    const yEnergyPerAcre = []; // y-axis average energy per acre
 
     // split('\n') splits table by row
     // split(',') splits row by commas
@@ -39,9 +39,8 @@ async function createChart() {
             labels: data.xEnergySource,
             datasets: [
                 {
-                    label:              'Average Energy Per Acre (MW/ac) by Energy Source',
+                    label:              'Energy per acre (MW/ac)',
                     data:               data.yEnergyPerAcre,
-                    fill:               true,
                     backgroundColor:    "#6971a55b",
                     borderColor:        "#6971a5ff",
                     borderWidth: 1
@@ -67,27 +66,27 @@ async function createChart() {
                 y: {                              // y-axis properties
                     title: {
                         display: true,                          
-                        text: 'Average Energy Per Acre (MW/ac) by Energy Source',     // y-axis title
+                        text: 'Energy Generation per Acre Used (MW/ac)',     // y-axis title
                         font: {
                             size: 14
                         },
                     },
                     ticks: {
-                        min: 0,                   
-                        maxTicksLimit: data.yTemps.length/10,        // Actual value can be set dynamically
+                        min: 0,
+                        maxTicksLimit: 8,
                         font: {
                             size: 12
                         }
                     },
                     grid: {                       // y-axis gridlines
-                        color: '#6c767e'
+                        color: '#6c767e6b'
                     }
                 }
             },
             plugins: {                  // Display options for title and legend
                 title: {
                     display: true,
-                    text: 'Global Mean Temperature vs. Year (since 1880)',
+                    text: 'U.S. Average Energy Generation per Acre by Energy Source',
                     font: {
                         size: 24,
                     },

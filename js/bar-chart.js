@@ -3,7 +3,7 @@
 // Code for generating a Chart.js line chart
 
 async function getData() {
-    const response = await fetch('../data/global-mean-temp.csv'); // .. to move up one folder
+    const response = await fetch('../data/results-data.csv'); // .. to move up one folder
     const data = await response.text();                           // CSV to TEXT
 
     const xEnergySource = []; // x-axis year values
@@ -12,19 +12,19 @@ async function getData() {
     // split('\n') splits table by row
     // split(',') splits row by commas
     // slice(start, end) returns new array starting at index start up to and including end
-    const headers = data.split('\n').slice(0, 1).split(',');
     const table = data.split('\n').slice(1); // split data by row/new line and remove first row (headers)
     console.log(table);
 
-    headers.forEach(headerItem => {
-        xEnergySource.push(headerItem);
-        console.log(headerItem);
-    });
-
-    table.split(',').forEach(energyPerAcre => {
+    table.forEach(row => {
+        const columns = row.split(',');
+        const energySource = columns[0];
+        xEnergySource.push(energySource);
+        const energyPerAcre = parseFloat(columns[1]);
         yEnergyPerAcre.push(energyPerAcre);
-        console.log(energyPerAcre);
-    });
+
+        console.log(energySource, energyPerAcre);
+
+    })
 
     return {xEnergySource, yEnergyPerAcre};    // use {} to return multiple values in 1 object
 }
@@ -67,7 +67,7 @@ async function createChart() {
                 y: {                              // y-axis properties
                     title: {
                         display: true,                          
-                        text: `Global Mean Temperatures (${degreeSymbol}C)`,     // y-axis title
+                        text: 'Average Energy Per Acre (MW/ac) by Energy Source',     // y-axis title
                         font: {
                             size: 14
                         },
